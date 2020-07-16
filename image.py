@@ -1,0 +1,15 @@
+from PIL import Image, ImageFilter
+
+img = Image.open('./testImg/DSC_2292.JPG')
+filtered_img = img.convert('L')
+filtered_img.save("grey.png", 'png')
+#filtered_img = img.filter(ImageFilter.SMOOTH)
+#grey_img = img.filter(ImageFilter.)
+#filtered_img.save("test.png", 'png')
+#print(img.mode)
+#print(img.format)
+#print(dir(img))
+#img.show()
+print(dir(img))
+img.thumbnail((400,400))
+img.show()
